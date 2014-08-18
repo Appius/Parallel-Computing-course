@@ -1,0 +1,14 @@
+<problem display_name="Companies" markdown="null" max_attempts="2" showanswer="never">
+  <p>Какие известные кампании используют данную модель и были отмечены в блоке лекции?</p>
+  <choiceresponse>
+    <checkboxgroup label="Какие известные кампании используют данную модель и были отмечены в блоке лекции?" direction="vertical">
+      <choice correct="true">Twitter</choice>
+      <choice correct="true">Facebook</choice>
+      <choice correct="false">Google+</choice>
+      <choice correct="true">UBS</choice>
+      <choice correct="true">Yahoo!</choice>
+      <choice correct="false">Yandex</choice>
+      <choice correct="true">LinkedIn</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

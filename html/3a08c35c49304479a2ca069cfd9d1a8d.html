@@ -1,0 +1,32 @@
+<p>Use <a href="https://github.com/epam-mooc/stm-java" target="_blank">link</a> to download source files and read "Getting started" to begin to work.</p>
+<h3><a class="anchor" href="https://github.com/epam-mooc/stm-java#1-transaction-return-value" name="user-content-1-transaction-return-value"></a>1. Transaction return value</h3>
+<p>We use <code>void</code> as a transaction return type. User must be able to do something like this:</p>
+<div class="highlight highlight-java">
+<pre><span class="n">Long</span> <span class="n">id</span> <span class="o">=</span> <span class="n">STM</span><span class="o">.&lt;</span><span class="n">Long</span><span class="o">&gt;</span><span class="n">transaction</span><span class="o">(...);</span>
+<span class="n">String</span> <span class="n">s</span> <span class="o">=</span> <span class="n">STM</span><span class="o">.&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="n">transaction</span><span class="o">(...);</span>
+</pre>
+</div>
+<p>Note: You can change the API and add generic parameter to infer the actual return type.</p>
+<h3><a class="anchor" href="https://github.com/epam-mooc/stm-java#2-avoid-calling-thisgettx-for-getset-ref-methods" name="user-content-2-avoid-calling-thisgettx-for-getset-ref-methods"></a>2. Avoid calling <code>this.getTx()</code> for <code>get/set</code> ref methods.</h3>
+<p>Not sure if it is possible due to Java limitations but investigate this problem, at least simplify access to the transaction.</p>
+<p>Note: One solution is to make <code>Transaction</code> protected inside <code>TransactionBlock</code> so, all callers, will obtain this reference by accessing <code>tx</code> variable. But I hope there is more elegant solution. Don't hesitate to change the internal API.</p>
+<h3><a class="anchor" href="https://github.com/epam-mooc/stm-java#3-fair-globalcontext" name="user-content-3-fair-globalcontext"></a>3. Fair <code>GlobalContext</code></h3>
+<p><code>GlobalContext</code> just delegates <code>get</code> ref value to the actual ref value, and does not support mapping, like <code>Transaction</code>'s <code>inTxMap</code>. Do the same.</p>
+<p>Note: Your implementation need to register ref values, perform safe update of the mapping and cleanup, if ref is not accessible.</p>
+<h3><a class="anchor" href="https://github.com/epam-mooc/stm-java#4-snapshot-isolation" name="user-content-4-snapshot-isolation"></a>4. Snapshot Isolation</h3>
+<p>In <code>Transaction.get()</code> we've cheated a bit. Our snapshot is <em>lazy</em>, it retrieves ref's value <em>on demand</em>. Implement the fair <strong>Snapshot Isolation</strong></p>
+<p>Note: This task is slightly related to the previous one, as you need all ref values to build the snapshot. Perform defensive copy of snapshot as you need identity, not refs.</p>
+<h3><a class="anchor" href="https://github.com/epam-mooc/stm-java#5-ref-history" name="user-content-5-ref-history"></a>5. Ref history</h3>
+<p>Current implementation contains one last version of ref value. Implement true <em>Multi-Versioning</em>. Suggest or implement a prototype, how multi-versioning can improve STM performance.</p>
+<h3><a class="anchor" href="https://github.com/epam-mooc/stm-java#6-exceptions" name="user-content-6-exceptions"></a>6. Exceptions</h3>
+<p>We do not support exceptions, would be good to have. Basically, there are must be two types of exceptions. One should trigger transaction retry (it can be some internal reason to throw this exception), another one should be thrown up to the caller method.</p>
+<h3><a class="anchor" href="https://github.com/epam-mooc/stm-java#7-nested-transactions" name="user-content-7-nested-transactions"></a>7. Nested transactions</h3>
+<p>I hope nested transactions are not supported in this code. Add them. Possible, we need to retry the whole outer transaction if collision detected inside nested transactions.</p>
+<h3><a class="anchor" href="https://github.com/epam-mooc/stm-java#8-instrumentation" name="user-content-8-instrumentation"></a>8. Instrumentation</h3>
+<p>Provide set of tools to test STM performance and calculate some metrics. Number of transactions per second, number of retries, longest transaction, etc. Select at least 10 metrics, which ones is up to you.</p>
+<h3><a class="anchor" href="https://github.com/epam-mooc/stm-java#9-improvement" name="user-content-9-improvement"></a>9. Improvement</h3>
+<p>Detect bottlenecks of current implementation and improve performance.</p>
+<p>Hint: <code>STM.commitLock</code> can be improved, but not limited to.</p>
+<h3><a class="anchor" href="https://github.com/epam-mooc/stm-java#10-implementation-from-scratch-hard" name="user-content-10-implementation-from-scratch-hard"></a>10. Implementation from scratch [HARD]</h3>
+<p>Implement any STM algorithm.</p>
+<p>&nbsp;</p>

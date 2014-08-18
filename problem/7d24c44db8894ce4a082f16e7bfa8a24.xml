@@ -1,0 +1,10 @@
+<problem display_name="Разделяемые ресурсы потоков" markdown="&gt;&gt;Какие ресурсы являются общими для всех потоков?&lt;&lt;&#10;     ( ) Куча и стек&#10;     (x) Куча&#10;     ( ) Стек     " max_attempts="2" showanswer="never">
+  <p>Какие ресурсы являются общими для всех потоков?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какие ресурсы являются общими для всех потоков?" type="MultipleChoice">
+      <choice correct="false">Куча и стек</choice>
+      <choice correct="true">Куча</choice>
+      <choice correct="false">Стек     </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

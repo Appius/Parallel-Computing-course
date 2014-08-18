@@ -1,0 +1,23 @@
+<p>Вы можете скачать исходный код <a href="https://github.com/epam-mooc/akka-demo" target="_blank">тут</a>.</p>
+<p><b>Условие</b><br /> В парикмахерской есть зал для стрижки одного клиента и комната ожидания n клиентов. Клиенты заходят в комнату ожидания по одному, если в ней есть место, либо уходят стричься в другой салон, если все места заняты. После того, как парикмахер заканчивает стрижку, клиент покидает салон и к парикмахеру заходит следующий клиент(если таковой имеется). Клиенты могут по одному заходить в комнату ожидания и также по одному заходить в зал для стрижки (если он свободен), причем эти два события являются взаимоисключающими. Если парикмахер видит, что в зале ожидания никого нет, он пересаживается вздремнуть в этом зале. Новый клиент, обнаружив дремлющего парикмахера, будит его, и тот стрижет клиента; в противном случае пришедший клиент должен будет подождать. Воспользуйтесь многопоточностью, чтобы скоординировать действия парикмахера и клиентов.</p>
+<p><b>Настройка</b><br /> Перед началом работы необходимо убедиться, что у Вас установлена java и maven. Далее используя IDE создаем maven проект. Для работы с Akka необходимо добавить следующие строчки в файл pom.xml:</p>
+<pre><span class="nt">&lt;repositories&gt;</span>
+  <span class="nt">&lt;repository&gt;</span>
+    <span class="nt">&lt;id&gt;</span>akka-snapshots<span class="nt">&lt;/id&gt;</span>
+      <span class="nt">&lt;snapshots&gt;</span>
+        <span class="nt">&lt;enabled&gt;</span>true<span class="nt">&lt;/enabled&gt;</span>
+      <span class="nt">&lt;/snapshots&gt;</span>
+      <span class="nt">&lt;url&gt;</span>http://repo.akka.io/snapshots/<span class="nt">&lt;/url&gt;</span>
+  <span class="nt">&lt;/repository&gt;</span>
+<span class="nt">&lt;/repositories&gt;</span></pre>
+<pre><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>com.typesafe.akka<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>akka-actor_2.10<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>2.4-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>junit<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>junit<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>3.8.1<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span></pre>

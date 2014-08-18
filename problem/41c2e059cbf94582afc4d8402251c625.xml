@@ -1,0 +1,10 @@
+<problem display_name="Multi-threading problem" markdown="&gt;&gt;Какая распространённая проблема многопоточных программ была упомянута в лекции?&lt;&lt;&#10;     ( ) Взаимная блокировка&#10;     ( ) Проблема ABA&#10;     (x) Гонка потоков" max_attempts="2" showanswer="never">
+  <p>Какая распространённая проблема многопоточных программ была упомянута в лекции?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какая распространённая проблема многопоточных программ была упомянута в лекции?" type="MultipleChoice">
+      <choice correct="false">Взаимная блокировка</choice>
+      <choice correct="false">Проблема ABA</choice>
+      <choice correct="true">Гонка потоков</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

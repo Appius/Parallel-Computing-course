@@ -1,0 +1,11 @@
+<problem display_name="Методы декомпозиции" markdown="&gt;&gt;Какие есть методы декомпозиции?&lt;&lt;&#10;&#10;[x] Декомпозиция данных&#10;[x] Декомпозиция задач&#10;[ ] Декомпозиция ресурсов&#10;[x] Конвейеризация (pipelining)&#10;&#10;&#10;" max_attempts="2" showanswer="never">
+  <p>Какие есть методы декомпозиции?</p>
+  <choiceresponse>
+    <checkboxgroup label="Какие есть методы декомпозиции?" direction="vertical">
+      <choice correct="true">Декомпозиция данных</choice>
+      <choice correct="true">Декомпозиция задач</choice>
+      <choice correct="false">Декомпозиция ресурсов</choice>
+      <choice correct="true">Конвейеризация (pipelining)</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

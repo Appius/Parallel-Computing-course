@@ -1,0 +1,10 @@
+<problem display_name="Synchronized methods" markdown="&gt;&gt;Могут ли два экземплярных synchronized метода выполнится одновременно? Если да, то при каких условиях?&lt;&lt;&#10;     ( ) Да, для этого надо указать по какому объекту идет синхронизация каждого из методов&#10;     ( ) Да, будут выполняться всегда, т.к. идет сихронизация между разными экзмеплятрами класса&#10;     (x) Нет" max_attempts="2" showanswer="never">
+  <p>Могут ли два экземплярных synchronized метода выполнится одновременно? Если да, то при каких условиях?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Могут ли два экземплярных synchronized метода выполнится одновременно? Если да, то при каких условиях?" type="MultipleChoice">
+      <choice correct="false">Да, для этого надо указать по какому объекту идет синхронизация каждого из методов</choice>
+      <choice correct="false">Да, будут выполняться всегда, т.к. идет сихронизация между разными экзмеплятрами класса</choice>
+      <choice correct="true">Нет</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

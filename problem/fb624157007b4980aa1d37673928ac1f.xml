@@ -1,0 +1,11 @@
+<problem display_name="Современные процессоры Intel или AMD" markdown="&gt;&gt;К какой категории относятся современные процессоры Intel или AMD?&lt;&lt;&#10;     ( ) SISD&#10;     ( ) SIMD&#10;     ( ) MISD&#10;     (x) MIMD   &#10;" max_attempts="2" showanswer="never">
+  <p>К какой категории относятся современные процессоры Intel или AMD?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="К какой категории относятся современные процессоры Intel или AMD?" type="MultipleChoice">
+      <choice correct="false">SISD</choice>
+      <choice correct="false">SIMD</choice>
+      <choice correct="false">MISD</choice>
+      <choice correct="true">MIMD   </choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

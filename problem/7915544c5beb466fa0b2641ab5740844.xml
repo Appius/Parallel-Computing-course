@@ -1,0 +1,11 @@
+<problem display_name="Создание актора" markdown="&gt;&gt;С помощью какого метода можно создать новый актор?&lt;&lt;&#10;     ( ) Метод create()&#10;     ( ) Через конструкцию new&#10;     ( ) Метод actorRef()&#10;     (x) Метод actorOf()" max_attempts="2" showanswer="never">
+  <p>С помощью какого метода можно создать новый актор?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="С помощью какого метода можно создать новый актор?" type="MultipleChoice">
+      <choice correct="false">Метод create()</choice>
+      <choice correct="false">Через конструкцию new</choice>
+      <choice correct="false">Метод actorRef()</choice>
+      <choice correct="true">Метод actorOf()</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

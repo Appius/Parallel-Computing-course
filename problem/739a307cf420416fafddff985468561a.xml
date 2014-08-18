@@ -1,0 +1,11 @@
+<problem display_name="Класс Runnable" markdown="&gt;&gt;Какой класс надо унаследовать, чтобы запустить поток в отдельном классе?&lt;&lt;&#10;     ( ) java.Runnable&#10;     ( ) java.util.Thread.Rubbale&#10;     ( ) java.util.Runnable&#10;     (x) java.lang.Runnable" max_attempts="2" showanswer="never">
+  <p>Какой класс надо унаследовать, чтобы запустить поток в отдельном классе?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какой класс надо унаследовать, чтобы запустить поток в отдельном классе?" type="MultipleChoice">
+      <choice correct="false">java.Runnable</choice>
+      <choice correct="false">java.util.Thread.Rubbale</choice>
+      <choice correct="false">java.util.Runnable</choice>
+      <choice correct="true">java.lang.Runnable</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

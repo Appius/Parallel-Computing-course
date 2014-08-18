@@ -1,0 +1,11 @@
+<problem display_name="Types of tasks" markdown="&gt;&gt;Какие два типа задач выделяются в данном блоке лекции?&lt;&lt;&#10;     ( ) Распараллеливание задач и ресурсов, с которыми работают эти задачи&#10;     (x) Задачи, которые можно полностю распараллелить и те, которые можно только частично&#10;     ( ) Задачи, которые могут выполняться параллельно и те, которые не могут&#10;     ( ) Concurrency and Paralleling tasks" showanswer="never">
+  <p>Какие два типа задач выделяются в данном блоке лекции?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какие два типа задач выделяются в данном блоке лекции?" type="MultipleChoice">
+      <choice correct="false">Распараллеливание задач и ресурсов, с которыми работают эти задачи</choice>
+      <choice correct="true">Задачи, которые можно полностю распараллелить и те, которые можно только частично</choice>
+      <choice correct="false">Задачи, которые могут выполняться параллельно и те, которые не могут</choice>
+      <choice correct="false">Concurrency and Paralleling tasks</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

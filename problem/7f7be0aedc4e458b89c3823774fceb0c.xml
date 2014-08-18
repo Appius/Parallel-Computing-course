@@ -1,0 +1,11 @@
+<problem display_name="Shared resources problems" markdown="&gt;&gt;Какие проблемы чаще всего возникают при многопоточной работе с общим ресурсом?&lt;&lt;&#10;     ( ) Гонки потоков&#10;     ( ) Взаимные блокировки&#10;     ( ) Ничего из перечисленного&#10;     (x) Оба понятия: гонка потоков и взаимные блокировки" max_attempts="2" showanswer="never">
+  <p>Какие проблемы чаще всего возникают при многопоточной работе с общим ресурсом?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какие проблемы чаще всего возникают при многопоточной работе с общим ресурсом?" type="MultipleChoice">
+      <choice correct="false">Гонки потоков</choice>
+      <choice correct="false">Взаимные блокировки</choice>
+      <choice correct="false">Ничего из перечисленного</choice>
+      <choice correct="true">Оба понятия: гонка потоков и взаимные блокировки</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

@@ -1,0 +1,81 @@
+<problem display_name="Akka" markdown="null" max_attempts="1" showanswer="never">
+  <p>
+    В Akka важным компонентом является маршрутизация сообщений. Роутинг позволяет управлять путем сообщения от отправителя к получателю. Akka предоставляет набор стандартных роутеров со специфической логикой маршрутизации:
+  </p>
+  <ul>
+    <li>
+      <p>RoundRobinRouter - роутер передает сообщения множеству получателей циклически, по кругу</p>
+      <center>
+        <img src="/static/lect4_img1.jpg"/>
+      </center>
+    </li>
+    <li>
+      <p>RandomRouter - из множества получателей данный роутер случайным образом выбирает одного</p>
+      <center>
+        <img src="/static/lect4_img2.jpg"/>
+      </center>
+    </li>
+    <li>
+      <p>BroadcastRouter - роутер посылает сообщение всем получателям</p>
+      <center>
+        <img src="/static/lect4_img3.jpg"/>
+      </center>
+    </li>
+    <li>
+      <p>SmallestMailboxRouter - отправляет сообщение получателю с наименьшей длинной очереди сообщений (наименьшим Mailbox’ом)</p>
+      <center>
+        <img src="/static/lect4_img4.jpg"/>
+      </center>
+    </li>
+    <li>
+      <p>ScatterGatherFirstCompletedRouter - наиболее комплексный из всех. Рассылает сообщение всем получателям аналогично BroadcastRouter’у. Затем первый обратный ответ от одного из акторов пересылает обратно отправителю. Все остальные результаты игнорируются. Подразумевает что получатели работают по принципу Request/Response - т.е. на любое входное сообщение отправляют ответное сообщение отправителю.</p>
+      <center>
+        <img src="/static/lect4_img5.jpg"/>
+      </center>
+    </li>
+  </ul>
+  <p>
+    Выберите подходящий тип роутера исходя из следующих условий:
+    <ul style="margin-left: 20px;"><li>
+        каждый Data-актор хранит уникальный сегмент набора данных
+      </li><li>
+        отправитель посылает сообщения-запросы (Query), с целью собрать агрегированную информацию для полного набора данных        
+      </li></ul>
+  </p>
+  <center>
+    <img src="/static/lect4_img6.jpg"/>
+  </center>
+  <choiceresponse>
+    <checkboxgroup label="Какой из выше описанных роутеров обеспечит схему передачи запроса, для данного сценария?" direction="vertical">
+      <choice correct="false">RoundRobinRouter</choice>
+      <choice correct="true">BroadcastRouter </choice>
+      <choice correct="false">RandomRouter</choice>
+      <choice correct="false">ScatterGatherFirstCompletedRouter</choice>
+      <choice correct="false">SmallestMailboxRouter</choice>
+    </checkboxgroup>
+  </choiceresponse>
+  <p>
+    Выберите подходящий тип роутера исходя из следующих условий:
+    <ul style="margin-left: 20px;"><li>
+        каждый Data-actor содержит полную реплику (копию) данных
+      </li><li>
+        отправитель посылает запросы на поиск по ключу
+      </li><li>
+        каждое сообщение-запрос (SearchQuery) несет в себе ссылку на целевого актора (Receiver), которому необходимо отправить результат поиска. Используя эту ссылку Data-актор отправляет результат поиска
+      </li><li>
+        в ответ на каждый запрос Receiver-актор должен получить ровно один ответ
+      </li></ul>
+  </p>
+  <center>
+    <img src="/static/lect4_img7.jpg"/>
+  </center>
+  <choiceresponse>
+    <checkboxgroup label="Какой из выше описанных роутеров обеспечит схему передачи запроса, для данного сценария?" direction="vertical">
+      <choice correct="true">RoundRobinRouter</choice>
+      <choice correct="false">BroadcastRouter </choice>
+      <choice correct="true">RandomRouter</choice>
+      <choice correct="false">ScatterGatherFirstCompletedRouter</choice>
+      <choice correct="true">SmallestMailboxRouter</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

@@ -1,0 +1,11 @@
+<problem display_name="Основной закон роста производительности" markdown="Какой закон описывает рост производительности процессоров:&#10;     ( ) Закон Амдала&#10;     ( ) Закон Густавсона — Барсиса&#10;     (x) Закон Мура&#10;     ( ) Закон Гроша" max_attempts="2" rerandomize="never" showanswer="never">
+  <p>Какой закон описывает рост производительности процессоров:</p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Закон Амдала</choice>
+      <choice correct="false">Закон Густавсона — Барсиса</choice>
+      <choice correct="true">Закон Мура</choice>
+      <choice correct="false">Закон Гроша</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

@@ -1,0 +1,44 @@
+<h1>ThreadPoolExecutor</h1>
+<p>The executor framework introduces an interface to manage task execution: Executor. Executor is the interface you use to submit tasks, represented as Runnable instances. This interface also isolates a task submission from a task execution: executors with different execution policies all publish the same submission interface: should you change your execution policy, your submission logic wouldn&rsquo;t be affected by the change.</p>
+<h2><a name="user-content-configuring-a-threadpoolexecutor" class="anchor" href="https://github.com/epam-mooc/threadpoolexecutor-demo/blob/master/README.md#configuring-a-threadpoolexecutor"></a>Configuring a ThreadPoolExecutor</h2>
+<p>The most extensive constructor of ThreadPoolExecutor is</p>
+<div class="highlight highlight-java">
+<pre><span class="kd">public</span> <span class="nf">ThreadPoolExecutor</span><span class="o">(</span>
+    <span class="kt">int</span> <span class="n">corePoolSize</span><span class="o">,</span>
+    <span class="kt">int</span> <span class="n">maxPoolSize</span><span class="o">,</span>
+    <span class="kt">long</span> <span class="n">keepAlive</span><span class="o">,</span>
+    <span class="n">TimeUnit</span> <span class="n">unit</span><span class="o">,</span>
+    <span class="n">BlockingQueue</span><span class="o">&lt;</span><span class="n">Runnable</span><span class="o">&gt;</span> <span class="n">workQueue</span><span class="o">,</span>
+    <span class="n">RejectedExecutionHandler</span> <span class="n">handler</span><span class="o">);</span>
+</pre>
+</div>
+<h2><a name="user-content-core-and-maximum-pool-sizes" class="anchor" href="https://github.com/epam-mooc/threadpoolexecutor-demo/blob/master/README.md#core-and-maximum-pool-sizes"></a>Core and maximum pool sizes</h2>
+<p><img src="https://camo.githubusercontent.com/f8114d5dadcb770641a900b3f235adec8872aedc/687474703a2f2f7475746f7269616c732e6a656e6b6f762e636f6d2f696d616765732f6a6176612d636f6e63757272656e63792d7574696c732f7468726561642d706f6f6c2d6578656375746f722e706e67" data-canonical-src="http://tutorials.jenkov.com/images/java-concurrency-utils/thread-pool-executor.png" style="max-width: 100%;" align="left" /> A ThreadPoolExecutor will automatically adjust the pool size according to the bounds set by corePoolSize and maximumPoolSize. When a new task is submitted in method <strong>execute(java.lang.Runnable)</strong>, and fewer than corePoolSize threads are running, a new thread is created to handle the request, even if other worker threads are idle. If there are more than corePoolSize but less than maximumPoolSize threads running, a new thread will be created only if the queue is full. By setting corePoolSize and maximumPoolSize the same, you create a fixed-size thread pool. By setting maximumPoolSize to an essentially unbounded value such as Integer.MAX_VALUE, you allow the pool to accommodate an arbitrary number of concurrent tasks. Most typically, core and maximum pool sizes are set only upon construction, but they may also be changed dynamically using <strong>setCorePoolSize(int)</strong> and <strong>setMaximumPoolSize(int)</strong>.</p>
+<h2><a name="user-content-queuing" class="anchor" href="https://github.com/epam-mooc/threadpoolexecutor-demo/blob/master/README.md#queuing"></a>Queuing</h2>
+<p>Any <strong>BlockingQueue</strong> may be used to transfer and hold submitted tasks. The use of this queue interacts with pool sizing:</p>
+<ul class="task-list">
+<li>If fewer than corePoolSize threads are running, the Executor always prefers adding a new thread rather than queuing.</li>
+<li>If corePoolSize or more threads are running, the Executor always prefers queuing a request rather than adding a new thread.</li>
+<li>If a request cannot be queued, a new thread is created unless this would exceed maximumPoolSize, in which case, the task will be rejected.</li>
+</ul>
+<p>There are three general strategies for queuing:</p>
+<ol class="task-list">
+<li><strong><em>Direct handoffs</em></strong>. A good default choice for a work queue is a <strong>SynchronousQueue</strong> that hands off tasks to threads without otherwise holding them. Here, an attempt to queue a task will fail if no threads are immediately available to run it, so a new thread will be constructed. This policy avoids lockups when handling sets of requests that might have internal dependencies. Direct handoffs generally require unbounded maximumPoolSizes to avoid rejection of new submitted tasks. This in turn admits the possibility of unbounded thread growth when commands continue to arrive on average faster than they can be processed.</li>
+<li><strong><em>Unbounded queues</em></strong>. Using an unbounded queue (for example a <strong>LinkedBlockingQueue</strong> without a predefined capacity) will cause new tasks to wait in the queue when all corePoolSize threads are busy. Thus, no more than corePoolSize threads will ever be created. (And the value of the maximumPoolSize therefore doesn't have any effect.) This may be appropriate when each task is completely independent of others, so tasks cannot affect each others execution; for example, in a web page server. While this style of queuing can be useful in smoothing out transient bursts of requests, it admits the possibility of unbounded work queue growth when commands continue to arrive on average faster than they can be processed.</li>
+<li><strong><em>Bounded queues</em></strong>. A bounded queue (for example, an <strong>ArrayBlockingQueue</strong>) helps prevent resource exhaustion when used with finite maximumPoolSizes, but can be more difficult to tune and control. Queue sizes and maximum pool sizes may be traded off for each other: Using large queues and small pools minimizes CPU usage, OS resources, and context-switching overhead, but can lead to artificially low throughput. If tasks frequently block (for example if they are I/O bound), a system may be able to schedule time for more threads than you otherwise allow. Use of small queues generally requires larger pool sizes, which keeps CPUs busier but may encounter unacceptable scheduling overhead, which also decreases throughput.</li>
+</ol>
+<h2><a name="user-content-rejected-tasks" class="anchor" href="https://github.com/epam-mooc/threadpoolexecutor-demo/blob/master/README.md#rejected-tasks"></a>Rejected tasks</h2>
+<p>New tasks submitted in method <strong>execute(java.lang.Runnable)</strong> will be rejected when the Executor has been shut down, and also when the Executor uses finite bounds for both maximum threads and work queue capacity, and is saturated. In either case, the execute method invokes the <strong>RejectedExecutionHandler.rejectedExecution(java.lang.Runnable, java.util.concurrent.ThreadPoolExecutor)</strong> method of its <strong>RejectedExecutionHandler</strong>. Four predefined handler policies are provided:</p>
+<ol class="task-list">
+<li>In the default <strong>ThreadPoolExecutor.AbortPolicy</strong>, the handler throws a runtime RejectedExecutionException upon rejection.</li>
+<li>In <strong>ThreadPoolExecutor.CallerRunsPolicy</strong>, the thread that invokes execute itself runs the task. This provides a simple feedback control mechanism that will slow down the rate that new tasks are submitted.</li>
+<li>In <strong>ThreadPoolExecutor.DiscardPolicy</strong>, a task that cannot be executed is simply dropped.</li>
+<li>In <strong>ThreadPoolExecutor.DiscardOldestPolicy</strong>, if the executor is not shut down, the task at the head of the work queue is dropped, and then execution is retried (which can fail again, causing this to be repeated.)</li>
+</ol>
+<p>It is possible to define and use other kinds of RejectedExecutionHandler classes. Doing so requires some care especially when policies are designed to work only under particular capacity or queuing policies.</p>
+<hr />
+<p>More information about ThreadPoolExecutor:</p>
+<ul class="task-list">
+<li><a href="http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html">http://docs.oracle.com/javase/7/docs/api/java/util/concurrent/ThreadPoolExecutor.html</a></li>
+</ul>
+<p>You can download source code <strong><a href="https://github.com/epam-mooc/threadpoolexecutor-demo" target="_blank">here</a></strong>.</p>

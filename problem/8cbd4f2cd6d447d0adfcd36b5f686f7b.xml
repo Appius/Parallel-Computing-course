@@ -1,0 +1,10 @@
+<problem display_name="Неразделяемые ресурсы потоков" markdown="&gt;&gt;Какие ресурсы являются собственными для потоков?&lt;&lt;&#10;     ( ) Куча и стек&#10;     ( ) Куча&#10;     (x) Стек" max_attempts="2" showanswer="never">
+  <p>Какие ресурсы являются собственными для потоков?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какие ресурсы являются собственными для потоков?" type="MultipleChoice">
+      <choice correct="false">Куча и стек</choice>
+      <choice correct="false">Куча</choice>
+      <choice correct="true">Стек</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

@@ -1,0 +1,11 @@
+<problem display_name="Image downloading" markdown="&gt;&gt;Какой из способов решения переполнения буфера подойдет для случая получения картинки от сервера?&lt;&lt;&#10;     ( ) Удалять старые объекты из очереди&#10;     (x) Не принимать новые объекты в очереди&#10;     ( ) Блокировать Producer до появления свободного места в очереди&#10;     ( ) Заставить поток Producer’а исполнить задачу" max_attempts="2" showanswer="never">
+  <p>Какой из способов решения переполнения буфера подойдет для случая получения картинки от сервера?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какой из способов решения переполнения буфера подойдет для случая получения картинки от сервера?" type="MultipleChoice">
+      <choice correct="false">Удалять старые объекты из очереди</choice>
+      <choice correct="true">Не принимать новые объекты в очереди</choice>
+      <choice correct="false">Блокировать Producer до появления свободного места в очереди</choice>
+      <choice correct="false">Заставить поток Producer’а исполнить задачу</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

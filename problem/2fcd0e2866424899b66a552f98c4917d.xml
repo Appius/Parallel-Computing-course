@@ -1,0 +1,157 @@
+<problem display_name="STM" markdown="null" max_attempts="1" showanswer="never">
+  <p>
+    Consider the following code for account transfer. Participants:
+    <div style="margin-left: 60px;">
+      N = 100 - number of accounts<br/>
+      T = 10000 - total number of transactions<br/>
+      M = 1 - amount of money transfered in one transaction<br/>
+      C - counts the number of enters in transaction<br/>
+    </div>
+    <br/>
+    Transfer money between two accounts    
+  </p>
+  <pre style="color:#000000;background:#ffffff;"><span style="color:#3f7f59; ">// ...</span><br/><span style="color:#7f0055; font-weight:bold; ">public</span> void transfer (<span style="color:#7f0055; font-weight:bold; ">final</span> Account from, <span style="color:#7f0055; font-weight:bold; ">final</span> Account to, <span style="color:#7f0055; font-weight:bold; ">final</span> long amount) {
+    StmUtils.atomic(<span style="color:#7f0055; font-weight:bold; ">new</span> Runnable() {
+        @Override
+        <span style="color:#7f0055; font-weight:bold; ">public</span> <span style="color:#7f0055; font-weight:bold; ">void </span>run() {
+            C++; <span style="color:#3f7f59; ">// atomic counter</span>
+            <span style="color:#7f0055; font-weight:bold; ">if</span> (from.balance() &amp;gt;= amount) {
+                from.incBalance(-amount);
+                to.incBalance(amount);
+            }
+        }
+    });
+}
+<span style="color:#3f7f59; ">// ...</span></pre>
+  <br/>
+  <p>
+      Simulation just call transfer between two <b>random</b> accounts <i>T</i> times in multiple threads. Initially each account contains 100$.
+    </p>
+  <p>
+    1. Compare counter value <b>C</b> after simulation with total number of transfers T:
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">C &lt; T</choice>
+      <choice correct="false">C &lt;= T</choice>
+      <choice correct="false">C = T</choice>
+      <choice correct="false">C &gt; T</choice>
+      <choice correct="true">C &gt;= T</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p><b>C</b> is greater (or equal) than <b>T</b> because it includes possible STM Retries between conflicted accounts.</p>
+    </div>
+  </solution>
+  <p>
+    2. Compare counter value <b>C</b> after simulation with total number of transfers T, if M = 200.
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">C &lt; T</choice>
+      <choice correct="false">C &lt;= T</choice>
+      <choice correct="true">C = T</choice>
+      <choice correct="false">C &gt; T</choice>
+      <choice correct="false">C &gt;= T</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p><b>C</b> is equal to <b>T</b> because STM using optimistic locks and retries happens only if write operation occurs. Write operation never occurs because each account contains 100$ and transfer request 200$.
+      </p>
+    </div>
+  </solution>
+  <p>
+    3. Compare counter value <b>C</b> after simulation with total number of transfers T, if N = 1 (All transfer happens within the one account).
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">C &lt; T</choice>
+      <choice correct="false">C &lt;= T</choice>
+      <choice correct="false">C = T</choice>
+      <choice correct="false">C &gt; T</choice>
+      <choice correct="true">C &gt;= T</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+        Some number retries occurs even if we use the same account, because account does not behave as a lock.
+      </p>
+    </div>
+  </solution>
+  <p>
+    4. Compare counter value <b>C</b> after simulation with total number of transfers T, if N = 1 (All transfer happens within the one account).
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">C &lt; T</choice>
+      <choice correct="false">C &lt;= T</choice>
+      <choice correct="false">C = T</choice>
+      <choice correct="false">C &gt; T</choice>
+      <choice correct="true">C &gt;= T</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+        Number of STM Retries will decrease because with greater number of accounts there is smaller probability for conflicted accounts.
+      </p>
+    </div>
+  </solution>
+  <p>
+    5. What is maximum value of counter C?
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">1000</choice>
+      <choice correct="false">2000</choice>
+      <choice correct="true">10000</choice>
+      <choice correct="false">100000</choice>
+      <choice correct="false">Unbounded</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>
+        STM Guarantees that at least one transaction completes without retries.
+      </p>
+    </div>
+  </solution>
+  <p>
+    6. Does STM Allows nested transactions?
+  </p>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="true">Yes</choice>
+      <choice correct="false">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <p>
+    7. Can we want to implement method <b>reverseTransfer</b> using just tricky call to <b>transfer</b>?</p>
+  <pre style="color:#000000;background:#ffffff;"><span style="color:#3f7f59; ">// ...</span><br/><span style="color:#7f0055; font-weight:bold; ">void</span> reverseTransfer(Account to, Account from, <span style="color:#7f0055; font-weight:bold; ">int</span> amount) {
+    transfer(from, to, -amount);
+}
+<span style="color:#3f7f59; ">// ...</span>
+</pre>
+  <br/>
+  <multiplechoiceresponse>
+    <choicegroup type="MultipleChoice">
+      <choice correct="false">Yes</choice>
+      <choice correct="true">No</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p><b>-amount</b> will be negative value, then it breaks if-condition and some account may contain negative balance.
+      </p>
+    </div>
+  </solution>
+</problem>

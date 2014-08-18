@@ -1,0 +1,6 @@
+<problem display_name="Время удвоения производительности процессоров" markdown="&gt;&gt;За сколько месяцев, по мнению Intel, производительность процессоров увеличивается в 2 раза?&lt;&lt;&#10;= 18" max_attempts="2" rerandomize="never" showanswer="never">
+  <p>За сколько месяцев, по мнению Intel, производительность процессоров увеличивается в 2 раза?</p>
+  <numericalresponse answer="18">
+    <formulaequationinput label="За сколько месяцев, по мнению Intel, производительность процессоров увеличивается в 2 раза?"/>
+  </numericalresponse>
+</problem>

@@ -1,0 +1,11 @@
+<problem display_name="Преимущества STM" markdown="&gt;&gt;Какие преимущества STM:&lt;&lt;&#10;&#10;[x] нет дедлоков, ливлоков&#10;[x] простота использования&#10;[ ] быстродействие&#10;[x] координированое состояние&#10;" max_attempts="2" showanswer="never">
+  <p>Какие преимущества STM:</p>
+  <choiceresponse>
+    <checkboxgroup label="Какие преимущества STM:" direction="vertical">
+      <choice correct="true">нет дедлоков, ливлоков</choice>
+      <choice correct="true">простота использования</choice>
+      <choice correct="false">быстродействие</choice>
+      <choice correct="true">координированое состояние</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

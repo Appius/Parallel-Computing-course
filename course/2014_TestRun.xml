@@ -1,0 +1,8 @@
+<course advanced_modules="[&quot;annotatable&quot;, &quot;edx_sga&quot;]" allow_anonymous_to_peers="false" cert_name_long="Parallel Computing in Java" course_edit_method="" course_image="can-stock-photo_csp7049649.jpg" display_name="Parallel Computing" display_organization="EPAM" end="2014-08-19T21:00:00Z" enrollment_end="2014-08-19T21:00:00Z" enrollment_start="2014-08-03T21:00:00Z" giturl="https://github.com/edx" graceperiod="" hide_progress_tab="false" info_sidebar_name="Course Handouts" invitation_only="true" is_new="true" ispublic="true" show_calculator="true" show_chat="true" start="2014-08-05T21:00:00Z">
+  <chapter url_name="fbb50fa5e74143518958e445ba490f9d"/>
+  <chapter url_name="54fe65bc4a2f42af843bb262de9d2337"/>
+  <chapter url_name="fd512018090745ee924764cfad76aa01"/>
+  <chapter url_name="2b86bc133d994270a39b9b1981fe2782"/>
+  <chapter url_name="129e2076256f43cab11de797036e8eb6"/>
+  <wiki slug="EPAM.PC101.2014_TestRun"/>
+</course>

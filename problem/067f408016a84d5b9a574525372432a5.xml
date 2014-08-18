@@ -1,0 +1,11 @@
+<problem display_name="Примеры декомпозиции данных" markdown="&gt;&gt;Какие примеры декомпозиции данных были рассмотрены в данном блоке лекции?&lt;&lt;&#10;&#10;[x] Сортировка массива&#10;[ ] Умножение матриц&#10;[x] Parallel volume rendering&#10;[ ] Решения задач математической физики: вычисление состояния системы со временем (эволюция системы)&#10;" max_attempts="2" showanswer="never">
+  <p>Какие примеры декомпозиции данных были рассмотрены в данном блоке лекции?</p>
+  <choiceresponse>
+    <checkboxgroup label="Какие примеры декомпозиции данных были рассмотрены в данном блоке лекции?" direction="vertical">
+      <choice correct="true">Сортировка массива</choice>
+      <choice correct="false">Умножение матриц</choice>
+      <choice correct="true">Parallel volume rendering</choice>
+      <choice correct="false">Решения задач математической физики: вычисление состояния системы со временем (эволюция системы)</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

@@ -1,0 +1,11 @@
+<problem display_name="Ребра графа" markdown="&gt;&gt;Что могут из себя представлять ребра графа?&lt;&lt;&#10;&#10;[x] Потоки данных&#10;[ ] Возможные переходы в программе&#10;[ ] Общие ресурсы для блоков кода&#10;[x] Потоки выполнения" max_attempts="2" showanswer="never">
+  <p>Что могут из себя представлять ребра графа?</p>
+  <choiceresponse>
+    <checkboxgroup label="Что могут из себя представлять ребра графа?" direction="vertical">
+      <choice correct="true">Потоки данных</choice>
+      <choice correct="false">Возможные переходы в программе</choice>
+      <choice correct="false">Общие ресурсы для блоков кода</choice>
+      <choice correct="true">Потоки выполнения</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

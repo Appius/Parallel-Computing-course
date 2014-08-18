@@ -1,0 +1,11 @@
+<problem display_name="Завершение потока в Java" markdown="&gt;&gt;Как можно завершить поток в Java?&lt;&lt;&#10;     ( ) Stop()&#10;     ( ) Interrupt()&#10;     ( ) Abort()&#10;     (x) Поток должен сам достичь своего завершения" max_attempts="2" showanswer="never">
+  <p>Как можно завершить поток в Java?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Как можно завершить поток в Java?" type="MultipleChoice">
+      <choice correct="false">Stop()</choice>
+      <choice correct="false">Interrupt()</choice>
+      <choice correct="false">Abort()</choice>
+      <choice correct="true">Поток должен сам достичь своего завершения</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

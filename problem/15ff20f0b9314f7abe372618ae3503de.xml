@@ -1,0 +1,11 @@
+<problem display_name="Общие состояния у акторов" markdown="&gt;&gt;Могут ли разные акторы иметь общие переменные?&lt;&lt;&#10;     ( ) Да, у всех акторов общее адресное пространство &#10;     (x) Нет, акторы не используют общие состояния&#10;     ( ) Да, у акторов могут быть общие переменные, они называются shared resources&#10;     ( ) Да, при желании можно создать ресурс для нескольких акторов" max_attempts="2" showanswer="never">
+  <p>Могут ли разные акторы иметь общие переменные?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Могут ли разные акторы иметь общие переменные?" type="MultipleChoice">
+      <choice correct="false">Да, у всех акторов общее адресное пространство </choice>
+      <choice correct="true">Нет, акторы не используют общие состояния</choice>
+      <choice correct="false">Да, у акторов могут быть общие переменные, они называются shared resources</choice>
+      <choice correct="false">Да, при желании можно создать ресурс для нескольких акторов</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

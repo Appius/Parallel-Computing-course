@@ -1,0 +1,10 @@
+<problem display_name="Multiple Choice" markdown="&gt;&gt;Может ли поток захвативший блок кода synchronized еще раз во время выполения получить к нему доступ?&lt;&lt;&#10;     ( ) Нет, возникнет ситуация deadlock&#10;     ( ) Нет, возникнет ситуация livelock&#10;     (x) Да, это называется Reentrancy" max_attempts="2" showanswer="never">
+  <p>Может ли поток захвативший блок кода synchronized еще раз во время выполения получить к нему доступ?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Может ли поток захвативший блок кода synchronized еще раз во время выполения получить к нему доступ?" type="MultipleChoice">
+      <choice correct="false">Нет, возникнет ситуация deadlock</choice>
+      <choice correct="false">Нет, возникнет ситуация livelock</choice>
+      <choice correct="true">Да, это называется Reentrancy</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

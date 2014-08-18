@@ -1,0 +1,10 @@
+<problem display_name="Запуск потока" markdown="&gt;&gt;С помощью какого метода класса java.util.Thread можно запустить поток в Java?&lt;&lt;&#10;     (x) start&#10;     ( ) startThread&#10;     ( ) startNew" max_attempts="2" showanswer="never">
+  <p>С помощью какого метода класса java.util.Thread можно запустить поток в Java?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="С помощью какого метода класса java.util.Thread можно запустить поток в Java?" type="MultipleChoice">
+      <choice correct="true">start</choice>
+      <choice correct="false">startThread</choice>
+      <choice correct="false">startNew</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

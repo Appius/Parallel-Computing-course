@@ -1,0 +1,11 @@
+<problem display_name="Изменение поведения метода onReceive" markdown="&gt;&gt;Может ли актор менять поведение своего метода onReceive в ходе выполнения программы? Если да, то какие методы для этого используются?&lt;&lt;&#10;     ( ) Да, может, для этого используются методы ChangeTo, RestoreTo&#10;     ( ) Нет, это поведение определяется на момент компиляции программы&#10;     (x) Да, может, можно использовать функции Become, Unbecome &#10;     ( ) Да, может, с помощью метода ChangeReceiveMethod" max_attempts="2" showanswer="never">
+  <p>Может ли актор менять поведение своего метода onReceive в ходе выполнения программы? Если да, то какие методы для этого используются?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Может ли актор менять поведение своего метода onReceive в ходе выполнения программы? Если да, то какие методы для этого используются?" type="MultipleChoice">
+      <choice correct="false">Да, может, для этого используются методы ChangeTo, RestoreTo</choice>
+      <choice correct="false">Нет, это поведение определяется на момент компиляции программы</choice>
+      <choice correct="true">Да, может, можно использовать функции Become, Unbecome </choice>
+      <choice correct="false">Да, может, с помощью метода ChangeReceiveMethod</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

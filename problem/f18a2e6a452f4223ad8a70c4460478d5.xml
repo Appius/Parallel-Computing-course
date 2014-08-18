@@ -1,0 +1,12 @@
+<problem display_name="Наблюдение за потоками" markdown="&gt;&gt;С помощью каких утилит можно наблюдать за работай потоков выполнения?&lt;&lt;&#10;&#10;[x] VisualVM&#10;[ ] jThreadMonitor&#10;[ ] jThreading&#10;[x] jstack&#10;[x] jConsole" max_attempts="2" showanswer="never">
+  <p>С помощью каких утилит можно наблюдать за работай потоков выполнения?</p>
+  <choiceresponse>
+    <checkboxgroup label="С помощью каких утилит можно наблюдать за работай потоков выполнения?" direction="vertical">
+      <choice correct="true">VisualVM</choice>
+      <choice correct="false">jThreadMonitor</choice>
+      <choice correct="false">jThreading</choice>
+      <choice correct="true">jstack</choice>
+      <choice correct="true">jConsole</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

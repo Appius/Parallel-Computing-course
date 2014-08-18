@@ -1,0 +1,11 @@
+<problem display_name="Основной класс в Java для работы с потоками" markdown="&gt;&gt;Какой основной класс отвечает за потоки в Java?&lt;&lt;&#10;     ( ) System.Threading.Thread&#10;     (x) java.util.Thread&#10;     ( ) java.Thread&#10;     ( ) java.Threading.Thread&#10;" max_attempts="2" showanswer="never">
+  <p>Какой основной класс отвечает за потоки в Java?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какой основной класс отвечает за потоки в Java?" type="MultipleChoice">
+      <choice correct="false">System.Threading.Thread</choice>
+      <choice correct="true">java.util.Thread</choice>
+      <choice correct="false">java.Thread</choice>
+      <choice correct="false">java.Threading.Thread</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

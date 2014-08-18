@@ -1,0 +1,12 @@
+<problem display_name="Состояния философов" markdown="&gt;&gt;Какие состояния есть у обедающих философов?&lt;&lt;&#10;&#10;[x] кушает&#10;[ ] ждет в очереди&#10;[x] философствует&#10;[ ] берет вилку&#10;[ ] кладет вилку&#10;&#10;" max_attempts="2" showanswer="never">
+  <p>Какие состояния есть у обедающих философов?</p>
+  <choiceresponse>
+    <checkboxgroup label="Какие состояния есть у обедающих философов?" direction="vertical">
+      <choice correct="true">кушает</choice>
+      <choice correct="false">ждет в очереди</choice>
+      <choice correct="true">философствует</choice>
+      <choice correct="false">берет вилку</choice>
+      <choice correct="false">кладет вилку</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

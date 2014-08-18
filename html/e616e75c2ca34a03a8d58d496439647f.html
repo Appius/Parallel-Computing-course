@@ -1,0 +1,28 @@
+<h1>Twitter-like application</h1>
+<p>Implement a simplified, console-based version of a Twitter-like social networking application satisfying the scenarios below.</p>
+<h3>Posting: Alice can publish messages to a personal timeline</h3>
+<div style="margin: 10px; border: 1px solid; padding: 10px;">&gt; Alice -&gt; I love the weather today<br /> &gt; Bob -&gt; Oh, we lost!<br /> &gt; Bob -&gt; at least it's sunny</div>
+<p>Note: The program should create the user when the first post is posted.</p>
+<h3>Reading: Bob can view Alice&rsquo;s timeline</h3>
+<div style="margin: 10px; border: 1px solid; padding: 10px;">&gt; Alice <br /><br /> I love the weather today (5 minutes ago)<br /><br /> &gt; Bob<br /><br /> Oh, we lost! (1 minute ago)<br /> at least it's sunny (2 minutes ago)</div>
+<h3>Following: Charlie can subscribe to Alice&rsquo;s and Bob&rsquo;s timelines, and view them on his wall, an aggregated list of all subscriptions</h3>
+<div style="margin: 10px; border: 1px solid; padding: 10px;">&gt; Charlie -&gt; I'm in New York today! Anyone wants to have a coffee?<br /> &gt; Charlie follows Alice<br /> &gt; Charlie wall<br /><br /> Charlie - I'm in New York today! Anyone wants to have a coffee? (2 seconds ago)<br /> Alice - I love the weather today (5 minutes ago)<br /><br /> &gt; Charlie follows Bob<br /> &gt; Charlie wall<br /><br /> Charlie - I'm in New York today! Anyone wants to have a coffee? (15 seconds ago)<br /> Bob - Oh, we lost! (1 minute ago)<br /> Bob - at least it's sunny (2 minutes ago)<br /> Alice - I love the weather today (5 minutes ago)</div>
+<h2>General requirements</h2>
+<ul>
+<li>Application must use the console for input and output;</li>
+<li>User submits commands to the application:</li>
+<ol style="margin-left: 20px;">
+<li><i>posting:</i> &lt;user name&gt; -&gt; &lt;message&gt;</li>
+<li><i>reading:</i> &lt;user name&gt;</li>
+<li><i>following:</i> &lt;user name&gt; follows &lt;another user&gt;</li>
+<li><i>wall:</i> &lt;user name&gt; wall</li>
+</ol>
+<li>Don't worry about handling any exceptions or invalid commands. Assume that the user will always type the correct commands. Just focus on the sunny day scenarios.</li>
+<li>Use whatever language and frameworks you want. (provide instructions how to run the application)</li>
+<li>The program should prompt &ldquo;&gt;&rdquo;, signifying that the user can enter the commands through the standard input. The program will either reply (e.g. for the view timeline command) or not (posting command), depending on the current state.</li>
+<li>The state should not be persisted, keeping data in memory is sufficient.</li>
+</ul>
+<p><b>IMPORTANT:</b> Implement the requirements focusing on writing the best code you can produce!</p>
+<h2>task</h2>
+<p>You can upload your solution in form below. Format must be following: archieve <strong>.zip</strong>, which contain list of <strong>.java </strong>files, one of them consist of class with <em><span class="kw2">public</span> <span class="kw2">static</span> <span class="kw3">void</span> main<span class="br0">(</span><span class="kw21">String</span><span class="br0">[</span><span class="br0">]</span> args</em><span class="br0"><em>).</em></span></p>
+<p></p>

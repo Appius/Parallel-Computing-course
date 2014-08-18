@@ -1,0 +1,11 @@
+<problem display_name="Concurrency и parallelism" markdown="&gt;&gt;Какая разница между concurrency и parallelism?&lt;&lt;&#10;     ( ) Разницы нет, это одинаковые понятия&#10;     (x) Concurrency возникает, когда два потока работают с общим ресурсом, parallelism - общее понятие многопоточности (когда есть 2 и больше одновременно работающих потоков)&#10;     ( ) Parallelism возникает когда два потока одновременно разделяют доступ к одному ресурсу, concurrency - понятие, описывающие категорию структур данных для многопоточной работы&#10;     ( ) Concurrency возникает при гонке потоков, когда один поток получает ичключительный доступ к ресурсу, тем самым блокирая второй, а parallelism - наличие одновременной работы хотя бы 2 потоков при работе с общим ресурсом" max_attempts="2" showanswer="never">
+  <p>Какая разница между concurrency и parallelism?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какая разница между concurrency и parallelism?" type="MultipleChoice">
+      <choice correct="false">Разницы нет, это одинаковые понятия</choice>
+      <choice correct="true">Concurrency возникает, когда два потока работают с общим ресурсом, parallelism - общее понятие многопоточности (когда есть 2 и больше одновременно работающих потоков)</choice>
+      <choice correct="false">Parallelism возникает когда два потока одновременно разделяют доступ к одному ресурсу, concurrency - понятие, описывающие категорию структур данных для многопоточной работы</choice>
+      <choice correct="false">Concurrency возникает при гонке потоков, когда один поток получает ичключительный доступ к ресурсу, тем самым блокирая второй, а parallelism - наличие одновременной работы хотя бы 2 потоков при работе с общим ресурсом</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

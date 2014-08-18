@@ -1,0 +1,64 @@
+<problem display_name="MonitorCaptureTest " markdown="null" max_attempts="1" showanswer="never">
+  <script type="loncapa/python">
+import re
+def test_add_to_ten(expect, ans):
+    regexp = re.compile(r'^own::Waiting(\r\n|\n|\r)main::Calling notify(\r\n|\n|\r)main::Sleeping for 5 seconds(\r\n|\n|\r)main::Exiting synchronized block(\r\n|\n|\r)own::Running again$')
+    if regexp.search(ans) is not None:
+        return True
+    else:
+        return False
+</script>
+  <p>
+  Что будет выведено в результате выполнения следующего кода:
+</p>
+  <pre style="color:#000000;background:#ffffff;"><span style="color:#7f0055; font-weight:bold; ">public </span><span style="color:#7f0055; font-weight:bold; ">class</span> MonitorCaptureTest {
+
+    <span style="color:#7f0055; font-weight:bold; ">public</span> <span style="color:#7f0055; font-weight:bold; ">static</span> <span style="color:#7f0055; font-weight:bold; ">void</span> main(<span style="color:#7f0055; font-weight:bold; ">String</span>[] args) {
+        <span style="color:#7f0055; font-weight:bold; ">Object</span> sync = <span style="color:#7f0055; font-weight:bold; ">new</span> <span style="color:#7f0055; font-weight:bold; ">Object</span>();
+        <span style="color:#7f0055; font-weight:bold; ">Thread</span> t = <span style="color:#7f0055; font-weight:bold; ">new</span> <span style="color:#7f0055; font-weight:bold; ">Thread</span>(<span style="color:#7f0055; font-weight:bold; ">new</span> WaitingThread(sync));
+        t.start();
+        <span style="color:#7f0055; font-weight:bold; ">try</span> {
+            <span style="color:#7f0055; font-weight:bold; ">Thread</span>.sleep(1000);
+        } <span style="color:#7f0055; font-weight:bold; ">catch</span> (<span style="color:#7f0055; font-weight:bold; ">InterruptedException</span> ex) {
+            <span style="color:#7f0055; font-weight:bold; ">System</span>.err.println(<span style="color:#2a00ff; ">"main::Interrupted: "</span> + ex.getMessage());
+        }
+        <span style="color:#7f0055; font-weight:bold; ">synchronized</span> (sync) {
+            <span style="color:#7f0055; font-weight:bold; ">System</span>.out.println(<span style="color:#2a00ff; ">"main::Calling notify"</span>);
+            sync.notify();
+            <span style="color:#7f0055; font-weight:bold; ">System</span>.out.println(<span style="color:#2a00ff; ">"main::Sleeping for 5 seconds"</span>);
+            <span style="color:#7f0055; font-weight:bold; ">try</span> {
+                <span style="color:#7f0055; font-weight:bold; ">Thread</span>.sleep(5000);
+            } <span style="color:#7f0055; font-weight:bold; ">catch</span> (<span style="color:#7f0055; font-weight:bold; ">InterruptedException</span> ex) {
+                <span style="color:#7f0055; font-weight:bold; ">System</span>.err.println(<span style="color:#2a00ff; ">"main::Interrupted: "</span> + ex.getMessage());
+            }
+            <span style="color:#7f0055; font-weight:bold; ">System</span>.out.println(<span style="color:#2a00ff; ">"main::Exiting synchronized block"</span>);
+        }
+    }
+
+    <span style="color:#7f0055; font-weight:bold; ">static</span> <span style="color:#7f0055; font-weight:bold; ">class</span> WaitingThread <span style="color:#7f0055; font-weight:bold; ">implements</span> <span style="color:#7f0055; font-weight:bold; ">Runnable</span> {
+
+        <span style="color:#7f0055; font-weight:bold; ">private</span> <span style="color:#7f0055; font-weight:bold; ">Object</span> sync;
+
+        <span style="color:#7f0055; font-weight:bold; ">public</span> WaitingThread(<span style="color:#7f0055; font-weight:bold; ">Object</span> sync) {
+            <span style="color:#7f0055; font-weight:bold; ">this</span>.sync = sync;
+        }
+
+        <span style="color:#7f0055; font-weight:bold; ">public</span> <span style="color:#7f0055; font-weight:bold; ">void</span> run() {
+            <span style="color:#7f0055; font-weight:bold; ">synchronized</span> (sync) {
+                <span style="color:#7f0055; font-weight:bold; ">System</span>.out.println(<span style="color:#2a00ff; ">"own::Waiting"</span>);
+                <span style="color:#7f0055; font-weight:bold; ">try</span> {
+                    sync.wait();
+                } <span style="color:#7f0055; font-weight:bold; ">catch</span> (<span style="color:#7f0055; font-weight:bold; ">InterruptedException</span> ex) {
+                    <span style="color:#7f0055; font-weight:bold; ">System</span>.err.println(<span style="color:#2a00ff; ">"own::Interrupted: "</span> + ex.getMessage());
+                }
+                <span style="color:#7f0055; font-weight:bold; ">System</span>.out.println(<span style="color:#2a00ff; ">"own::Running again"</span>);
+            }
+        }
+    }
+}
+</pre>
+  <br/>
+  <customresponse cfn="test_add_to_ten">
+    <textbox size="40" label="Code"/>
+  </customresponse>
+</problem>

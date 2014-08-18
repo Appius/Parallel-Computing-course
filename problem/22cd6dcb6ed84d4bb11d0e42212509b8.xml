@@ -1,0 +1,11 @@
+<problem display_name="ThreadPoolExecutor" markdown="&gt;&gt;Что нельзя указать при выполнении ThreadPoolExecutor?&lt;&lt;&#10;     ( ) Минимальное количество потоков, которое всегда есть (даже если задач в данный момент нету)&#10;     ( ) Timeout - время ожидания, по истечению которого, если задача не была выполнена, она удаляется из очереди&#10;     (x) Приоритет задач&#10;     ( ) Структуру данных для реализации очереди" max_attempts="2" showanswer="never">
+  <p>Что нельзя указать при выполнении ThreadPoolExecutor?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Что нельзя указать при выполнении ThreadPoolExecutor?" type="MultipleChoice">
+      <choice correct="false">Минимальное количество потоков, которое всегда есть (даже если задач в данный момент нету)</choice>
+      <choice correct="false">Timeout - время ожидания, по истечению которого, если задача не была выполнена, она удаляется из очереди</choice>
+      <choice correct="true">Приоритет задач</choice>
+      <choice correct="false">Структуру данных для реализации очереди</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

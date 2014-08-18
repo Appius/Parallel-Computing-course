@@ -1,0 +1,11 @@
+<problem display_name="Недостатки локов" markdown="&gt;&gt;Отметьте недостатки локов:&lt;&lt;&#10;&#10;[ ] нет разделения на рид/райт&#10;[x] сложно использовать&#10;[ ] плохая производительность&#10;[x] защищает код а не данные&#10;" max_attempts="2" showanswer="never">
+  <p>Отметьте недостатки локов:</p>
+  <choiceresponse>
+    <checkboxgroup label="Отметьте недостатки локов:" direction="vertical">
+      <choice correct="false">нет разделения на рид/райт</choice>
+      <choice correct="true">сложно использовать</choice>
+      <choice correct="false">плохая производительность</choice>
+      <choice correct="true">защищает код а не данные</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

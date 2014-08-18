@@ -1,0 +1,11 @@
+<problem display_name="Сurrency" markdown="&gt;&gt;Какой из способов решения переполнения буфера подойдет для случая изменения курса валют?&lt;&lt;&#10;(x) Удалять старые объекты из очереди&#10;( ) Не принимать новые объекты в очереди&#10;( ) Блокировать Producer до появления свободного места в очереди&#10;( ) Заставить поток Producer’а исполнить задачу&#10;" max_attempts="2" showanswer="never">
+  <p>Какой из способов решения переполнения буфера подойдет для случая изменения курса валют?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какой из способов решения переполнения буфера подойдет для случая изменения курса валют?" type="MultipleChoice">
+      <choice correct="true">Удалять старые объекты из очереди</choice>
+      <choice correct="false">Не принимать новые объекты в очереди</choice>
+      <choice correct="false">Блокировать Producer до появления свободного места в очереди</choice>
+      <choice correct="false">Заставить поток Producer’а исполнить задачу</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

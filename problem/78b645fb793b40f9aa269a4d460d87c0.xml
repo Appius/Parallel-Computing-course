@@ -1,0 +1,11 @@
+<problem display_name="JVM и AKKA" markdown="&gt;&gt;Как соотносятся JVM и AKKA?&lt;&lt;&#10;     ( ) На сегодняшний день Akka это встроенный компонент JVM&#10;     ( ) Akka работает как отдельный компонент рядом с JVM&#10;     (x) Akka работает поверх JVM, потому может вызывать java код напрямую&#10;     ( ) Akka работает поверх JVM, но java код не может выполнять из соображений инкапсуляции" max_attempts="2" showanswer="never">
+  <p>Как соотносятся JVM и AKKA?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Как соотносятся JVM и AKKA?" type="MultipleChoice">
+      <choice correct="false">На сегодняшний день Akka это встроенный компонент JVM</choice>
+      <choice correct="false">Akka работает как отдельный компонент рядом с JVM</choice>
+      <choice correct="true">Akka работает поверх JVM, потому может вызывать java код напрямую</choice>
+      <choice correct="false">Akka работает поверх JVM, но java код не может выполнять из соображений инкапсуляции</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

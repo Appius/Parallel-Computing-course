@@ -1,0 +1,10 @@
+<problem display_name="Optimal number of threads" markdown="&gt;&gt;От чего зависит оптимальное количество потоков?&lt;&lt;&#10;[x] От наличия мест, где предусмотрено ожидание выполнения других программных компонентов&#10;[ ] От вычислительных способностей системы&#10;[x] От наличия дополнительных задач&#10;" max_attempts="2" showanswer="never">
+  <p>От чего зависит оптимальное количество потоков?</p>
+  <choiceresponse>
+    <checkboxgroup label="От чего зависит оптимальное количество потоков?" direction="vertical">
+      <choice correct="true">От наличия мест, где предусмотрено ожидание выполнения других программных компонентов</choice>
+      <choice correct="false">От вычислительных способностей системы</choice>
+      <choice correct="true">От наличия дополнительных задач</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

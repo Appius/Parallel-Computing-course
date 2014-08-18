@@ -1,0 +1,45 @@
+<problem display_name="Allowable variants of producer-consumer" markdown="null" max_attempts="1" showanswer="never">
+  <p>Дана следующая реализация задачи producer–consumer:</p>
+  <pre style="color:#000000;background:#ffffff;"><span style="color:#7f0055; font-weight:bold; ">public</span><span style="color:#7f0055; font-weight:bold; ">class</span> Buffer {
+    <span style="color:#7f0055; font-weight:bold; ">private</span> <span style="color:#7f0055; font-weight:bold; ">Integer</span> n;
+    <span style="color:#7f0055; font-weight:bold; ">private</span> <span style="color:#7f0055; font-weight:bold; ">boolean</span> flag = <span style="color:#7f0055; font-weight:bold; ">false</span>;
+    
+    <span style="color:#7f0055; font-weight:bold; ">public</span> <span style="color:#7f0055; font-weight:bold; ">synchronized</span> <span style="color:#7f0055; font-weight:bold; ">void</span> put(<span style="color:#7f0055; font-weight:bold; ">Integer</span> i) <span style="color:#7f0055; font-weight:bold; ">throws</span> <span style="color:#7f0055; font-weight:bold; ">InterruptedException</span> {
+        <span style="color:#7f0055; font-weight:bold; ">while</span> (flag) {
+            <span style="color:#7f0055; font-weight:bold; ">if</span> (n != <span style="color:#7f0055; font-weight:bold; ">null</span>) {
+                wait();
+            }
+        }
+        n = i;
+        flag = <span style="color:#7f0055; font-weight:bold; ">true</span>;
+        notifyAll();
+    }
+    
+    <span style="color:#7f0055; font-weight:bold; ">public</span> <span style="color:#7f0055; font-weight:bold; ">synchronized</span> <span style="color:#7f0055; font-weight:bold; ">Integer</span> get() <span style="color:#7f0055; font-weight:bold; ">throws</span> <span style="color:#7f0055; font-weight:bold; ">InterruptedException</span> {
+        <span style="color:#7f0055; font-weight:bold; ">while</span> (!flag) {
+            <span style="color:#7f0055; font-weight:bold; ">if</span> (n == <span style="color:#7f0055; font-weight:bold; ">null</span>) {
+                wait();
+            }
+        }
+        <span style="color:#7f0055; font-weight:bold; ">int</span> t = n;
+        n = <span style="color:#7f0055; font-weight:bold; ">null</span>;
+        notifyAll();
+        flag = <span style="color:#7f0055; font-weight:bold; ">false</span>;
+        <span style="color:#7f0055; font-weight:bold; ">return</span> t;
+    }
+}
+</pre>
+  <br/>
+  <p>Выберите допустимые комбинации нахождения в wait set следущих потоков.</p>
+  <choiceresponse>
+    <checkboxgroup label="Выберите допустимые комбинации нахождения в wait set следущих потоков." direction="vertical">
+      <choice correct="true">1 Prod и 1 Cons: wait set - 1 Prod thread</choice>
+      <choice correct="true">1 Prod и 1 Cons: wait set - 1 Cons thread</choice>
+      <choice correct="false">1 Prod и 1 Cons: wait set - 1 Prod and 1 Cons threads</choice>
+      <choice correct="true">2 Prod и 2 Cons: wait set - 2 Prod thread</choice>
+      <choice correct="true">2 Prod и 2 Cons: wait set - 2 Cons threads</choice>
+      <choice correct="false">2 Prod и 2 Cons: wait set - 1 Prod and 1 Cons threads</choice>
+      <choice correct="false">2 Prod и 2 Cons: wait set - 1 Prod and 2 Cons threads</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

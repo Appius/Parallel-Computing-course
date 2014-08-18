@@ -1,0 +1,13 @@
+<problem display_name="Monitor block" markdown="&gt;&gt;Какие объекты в Java имеют блок monitor для синхронизации?&lt;&lt;&#10;[ ] статические члены&#10;[ ] экземплярные члены&#10;[ ] запечатанные объекты (final)&#10;[ ] классы&#10;[ ] только статические и экземплярные члены&#10;[x] все выше перечисленные" max_attempts="2" showanswer="never">
+  <p>Какие объекты в Java имеют блок monitor для синхронизации?</p>
+  <choiceresponse>
+    <checkboxgroup label="Какие объекты в Java имеют блок monitor для синхронизации?" direction="vertical">
+      <choice correct="false">статические члены</choice>
+      <choice correct="false">экземплярные члены</choice>
+      <choice correct="false">запечатанные объекты (final)</choice>
+      <choice correct="false">классы</choice>
+      <choice correct="false">только статические и экземплярные члены</choice>
+      <choice correct="true">все выше перечисленные</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

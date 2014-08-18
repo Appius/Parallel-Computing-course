@@ -1,0 +1,11 @@
+<problem display_name="Узлы в графе зависимостей" markdown="&gt;&gt;Что из себя НЕ представляют узлы в графе зависимостей?&lt;&lt;&#10;     ( ) Вызовы функций&#10;     ( ) Присваиваемые значения&#10;     (x) Индексы&#10;     ( ) Константы" max_attempts="2" showanswer="never">
+  <p>Что из себя НЕ представляют узлы в графе зависимостей?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Что из себя НЕ представляют узлы в графе зависимостей?" type="MultipleChoice">
+      <choice correct="false">Вызовы функций</choice>
+      <choice correct="false">Присваиваемые значения</choice>
+      <choice correct="true">Индексы</choice>
+      <choice correct="false">Константы</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

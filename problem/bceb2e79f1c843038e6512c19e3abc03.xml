@@ -1,0 +1,12 @@
+<problem display_name="Задачи распараллеливания" markdown="&gt;&gt;Какие задачи не предрасположены к распараллеливанию?&lt;&lt;&#10;&#10;[ ] Поиск слов в документе&#10;[ ] Компиляция программы&#10;[x] Итеративные алгоритмы&#10;[ ] Индексирование веб-страниц&#10;[ ] Умножение матриц&#10;&#10;" max_attempts="2" showanswer="never">
+  <p>Какие задачи не предрасположены к распараллеливанию?</p>
+  <choiceresponse>
+    <checkboxgroup label="Какие задачи не предрасположены к распараллеливанию?" direction="vertical">
+      <choice correct="false">Поиск слов в документе</choice>
+      <choice correct="false">Компиляция программы</choice>
+      <choice correct="true">Итеративные алгоритмы</choice>
+      <choice correct="false">Индексирование веб-страниц</choice>
+      <choice correct="false">Умножение матриц</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

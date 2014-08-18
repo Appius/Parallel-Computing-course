@@ -1,0 +1,6 @@
+<problem display_name="Количество людей за столом" markdown="&gt;&gt;Сколько людей сидело за столом в известной проблеме обедающих философов?&lt;&lt;&#10;&#10;= 5" max_attempts="2" showanswer="never">
+  <p>Сколько людей сидело за столом в известной проблеме обедающих философов?</p>
+  <numericalresponse answer="5">
+    <formulaequationinput label="Сколько людей сидело за столом в известной проблеме обедающих философов?"/>
+  </numericalresponse>
+</problem>

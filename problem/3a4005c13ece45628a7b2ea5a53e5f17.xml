@@ -1,0 +1,9 @@
+<problem display_name="Использование экземпляра Runnable" markdown="&gt;&gt;Можно ли экземпляр Runnable передать нескольких потокам?&lt;&lt;&#10;     (x) Да&#10;     ( ) Нет" max_attempts="1" showanswer="never">
+  <p>Можно ли экземпляр Runnable передать нескольких потокам?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Можно ли экземпляр Runnable передать нескольких потокам?" type="MultipleChoice">
+      <choice correct="true">Да</choice>
+      <choice correct="false">Нет</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

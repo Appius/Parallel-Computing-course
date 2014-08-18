@@ -1,0 +1,10 @@
+<problem display_name="java.util.concurrent" markdown="&gt;&gt;Что находится в пространстве имен java.util.concurrent?&lt;&lt;&#10;     ( ) Структуры данных (коллекции) для многопоточной работы&#10;     (x) Набор примитивов и инструментов для многопоточной работы&#10;     ( ) Набор статических классов, готовых инструментов для синхронизации многопоточных приложений" max_attempts="2" showanswer="never">
+  <p>Что находится в пространстве имен java.util.concurrent?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Что находится в пространстве имен java.util.concurrent?" type="MultipleChoice">
+      <choice correct="false">Структуры данных (коллекции) для многопоточной работы</choice>
+      <choice correct="true">Набор примитивов и инструментов для многопоточной работы</choice>
+      <choice correct="false">Набор статических классов, готовых инструментов для синхронизации многопоточных приложений</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

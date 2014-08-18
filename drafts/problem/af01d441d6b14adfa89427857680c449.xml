@@ -1,0 +1,12 @@
+<problem display_name="Проблемы современных процессоров" markdown="null" max_attempts="2" rerandomize="never" showanswer="never">
+  <p>С какими проблемами столкнулась компьютерная индустрия в связи с увеличением частоты процессора:</p>
+  <choiceresponse>
+    <checkboxgroup direction="vertical">
+      <choice correct="true">Чрезмерное энергопотребление</choice>
+      <choice correct="false">Проявление квантовых эффектов</choice>
+      <choice correct="true">Выделение тепла</choice>
+      <choice correct="true">Увеличение токов потерь</choice>
+      <choice correct="false">Невозможность увеличения скорости из-за микропроцессорной архитектуры</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

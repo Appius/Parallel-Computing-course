@@ -1,0 +1,12 @@
+<problem display_name="Producer-consumer problems" markdown="&gt;&gt;С какими основными проблемами сталкиваются на практике при реализации шаблона &quot;Producer-consumer&quot;?&lt;&lt;&#10;[x] Какое количество потоков использовать?&#10;[ ] Какое минимальное количество потоков может справится с предполагаемой нагрузкой?&#10;[x] Какую структуру использовать для очереди задач?&#10;[x] Что делать при переполнении буфера?&#10;[ ] Какое оптимальное соотношение между количеством producer и consumer?&#10;" max_attempts="2" showanswer="never">
+  <p>С какими основными проблемами сталкиваются на практике при реализации шаблона "Producer-consumer"?</p>
+  <choiceresponse>
+    <checkboxgroup label="С какими основными проблемами сталкиваются на практике при реализации шаблона &quot;Producer-consumer&quot;?" direction="vertical">
+      <choice correct="true">Какое количество потоков использовать?</choice>
+      <choice correct="false">Какое минимальное количество потоков может справится с предполагаемой нагрузкой?</choice>
+      <choice correct="true">Какую структуру использовать для очереди задач?</choice>
+      <choice correct="true">Что делать при переполнении буфера?</choice>
+      <choice correct="false">Какое оптимальное соотношение между количеством producer и consumer?</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

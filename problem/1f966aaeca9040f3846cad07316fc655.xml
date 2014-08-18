@@ -1,0 +1,11 @@
+<problem display_name="Простейший актор" markdown="&gt;&gt;Что из себя представляет простейший актор?&lt;&lt;&#10;     ( ) Это класс, унаследованный от TypedActor в пакете akka.actor&#10;     (x) Это класс, унаследованный от UntypedActor в пакете akka.actor&#10;     ( ) Это класс, унаследованный от Actor в пакете akka.actor&#10;     ( ) Это класс, унаследованный от TypedActor в пакете akka" max_attempts="2" showanswer="never">
+  <p>Что из себя представляет простейший актор?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Что из себя представляет простейший актор?" type="MultipleChoice">
+      <choice correct="false">Это класс, унаследованный от TypedActor в пакете akka.actor</choice>
+      <choice correct="true">Это класс, унаследованный от UntypedActor в пакете akka.actor</choice>
+      <choice correct="false">Это класс, унаследованный от Actor в пакете akka.actor</choice>
+      <choice correct="false">Это класс, унаследованный от TypedActor в пакете akka</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

@@ -1,0 +1,1 @@
+{"GRADER": [{"min_count": 5, "weight": 0.5, "type": "Homework", "drop_count": 0, "short_label": "HW"}, {"min_count": 5, "weight": 0.5, "type": "Final Test", "drop_count": 0, "short_label": "FT"}], "GRADE_CUTOFFS": {"A": 0.95, "C": 0.75, "B": 0.85, "D": 0.65}}

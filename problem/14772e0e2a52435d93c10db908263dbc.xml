@@ -1,0 +1,11 @@
+<problem display_name="Поддержка STM" markdown="&gt;&gt;В каких языках STM поддерживается нативно:&lt;&lt;&#10;&#10;[ ] Java&#10;[x] Clojure&#10;[x] Haskell&#10;[ ] С++" max_attempts="2" showanswer="never">
+  <p>В каких языках STM поддерживается нативно:</p>
+  <choiceresponse>
+    <checkboxgroup label="В каких языках STM поддерживается нативно:" direction="vertical">
+      <choice correct="false">Java</choice>
+      <choice correct="true">Clojure</choice>
+      <choice correct="true">Haskell</choice>
+      <choice correct="false">С++</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

@@ -1,0 +1,10 @@
+<problem display_name="Resource starvation" markdown="&gt;&gt;Когда возникает resource starvation?&lt;&lt;&#10;     ( ) Когда несколько потоков находятся в ситуации ожидания ресурсов, занятых самими этими потоками&#10;     ( ) Когда потоки не находятся в заблокированных положениях, но все равно выполняют бесполезную работу и зацикливаются&#10;     (x) Когда доступ к необходимому ресурсу постоянно запрещен, хотя возможен" max_attempts="2" showanswer="never">
+  <p>Когда возникает resource starvation?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Когда возникает resource starvation?" type="MultipleChoice">
+      <choice correct="false">Когда несколько потоков находятся в ситуации ожидания ресурсов, занятых самими этими потоками</choice>
+      <choice correct="false">Когда потоки не находятся в заблокированных положениях, но все равно выполняют бесполезную работу и зацикливаются</choice>
+      <choice correct="true">Когда доступ к необходимому ресурсу постоянно запрещен, хотя возможен</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

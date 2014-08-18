@@ -1,0 +1,10 @@
+<problem display_name="Producer-consumer" markdown="&gt;&gt;Какая схема работы шаблона &quot;Producer-consumer&quot;?&lt;&lt;&#10;     ( ) Producer генерирует сообщения или объекты, которые получают все consumer, которые подписаны на данного procuder&#10;     (x) Producer создает объекты (задачи), которые помещает в очередь, consumer или выполняющее лицо берет из очереди задачу на выполнение, причем один объект может взять только один consumer&#10;     ( ) Producer создает объекты (задачи), которые помещает в очередь, consumer или выполняющее лицо берет из очереди задачу на выполнение, причем один объект может взять несколько consumer, для корректной работы нужна синхронизация" max_attempts="2" showanswer="never">
+  <p>Какая схема работы шаблона "Producer-consumer"?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какая схема работы шаблона &quot;Producer-consumer&quot;?" type="MultipleChoice">
+      <choice correct="false">Producer генерирует сообщения или объекты, которые получают все consumer, которые подписаны на данного procuder</choice>
+      <choice correct="true">Producer создает объекты (задачи), которые помещает в очередь, consumer или выполняющее лицо берет из очереди задачу на выполнение, причем один объект может взять только один consumer</choice>
+      <choice correct="false">Producer создает объекты (задачи), которые помещает в очередь, consumer или выполняющее лицо берет из очереди задачу на выполнение, причем один объект может взять несколько consumer, для корректной работы нужна синхронизация</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

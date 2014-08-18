@@ -1,0 +1,12 @@
+<problem display_name="Matrix multiplication" markdown="null" max_attempts="1" showanswer="never" weight="1.0">
+  <p>Один из способов параллельного вычисления произведения матриц приведен на рисунке.</p>
+  <img src="/static/Matrix_multiplication.jpg"/>
+  <p>
+    <b>Закон Амдала:</b>
+  </p>
+  <img src="/static/Amdal.jpg"/>
+  <p>Предполагая, что размер матрицы N*N (где N=1000), подсчитайте согласно закону Амдала, сколько нужно ядер, чтобы выполнение программы ускорилось в 100 раз.</p>
+  <stringresponse answer="111" type="ci">
+    <textline label="Предполагая, что размер матрицы N*N (где N=1000), подсчитайте согласно закону Амдала, сколько нужно ядер, чтобы выполнение программы ускорилось в 100 раз" size="9"/>
+  </stringresponse>
+</problem>

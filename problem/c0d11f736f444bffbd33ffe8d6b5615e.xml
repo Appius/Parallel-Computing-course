@@ -1,0 +1,17 @@
+<problem display_name="Линейный рост производительности" markdown="null" max_attempts="2" showanswer="never">
+  <p>При каком условии α наблюдается линейный прирост производительности с увеличением количества ядер согласно закону Амдала?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="При каком условии α наблюдается линейный прирост производительности с увеличением количества ядер согласно закону Амдала?" type="MultipleChoice">
+      <choice correct="false">α = 1</choice>
+      <choice correct="false">0.5 &lt; α &lt; 1</choice>
+      <choice correct="true">α = 0</choice>
+      <choice correct="false">0 &lt; α &lt; 0.5</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+  <solution>
+    <div class="detailed-solution">
+      <p>Explanation</p>
+      <p>Согласно этому закону, ускорение выполнения программы за счёт распараллеливания её инструкций на множестве вычислителей ограничено временем, необходимым для выполнения её последовательных инструкций.</p>
+    </div>
+  </solution>
+</problem>

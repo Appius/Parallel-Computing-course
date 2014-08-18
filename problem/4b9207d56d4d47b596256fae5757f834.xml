@@ -1,0 +1,11 @@
+<problem display_name="Поведение актора" markdown="&gt;&gt;К какому объекту приводят аналогию поведения актора в данной части лекции?&lt;&lt;&#10;     ( ) Ориентированному графу&#10;     (x) Конечному автомату&#10;     ( ) Красно-черному дереву (самобалансирующиеся бинарное дерево)&#10;     ( ) Матричному дереву&#10;" max_attempts="2" showanswer="never">
+  <p>К какому объекту приводят аналогию поведения актора в данной части лекции?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="К какому объекту приводят аналогию поведения актора в данной части лекции?" type="MultipleChoice">
+      <choice correct="false">Ориентированному графу</choice>
+      <choice correct="true">Конечному автомату</choice>
+      <choice correct="false">Красно-черному дереву (самобалансирующиеся бинарное дерево)</choice>
+      <choice correct="false">Матричному дереву</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

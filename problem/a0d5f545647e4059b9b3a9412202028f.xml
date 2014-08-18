@@ -1,0 +1,11 @@
+<problem display_name="SISD" markdown="&gt;&gt;Как расшифровывается один из видов параллельных систем по версии Флинна, а имеено SISD?&lt;&lt;&#10;     ( ) Socorro Independent School District&#10;     ( ) Simple instructioin, simple data&#10;     (x) Single instruction, single data&#10;     ( ) Sample-instruction, sample-data&#10;" max_attempts="2" showanswer="never">
+  <p>Как расшифровывается один из видов параллельных систем по версии Флинна, а имеено SISD?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Как расшифровывается один из видов параллельных систем по версии Флинна, а имеено SISD?" type="MultipleChoice">
+      <choice correct="false">Socorro Independent School District</choice>
+      <choice correct="false">Simple instructioin, simple data</choice>
+      <choice correct="true">Single instruction, single data</choice>
+      <choice correct="false">Sample-instruction, sample-data</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

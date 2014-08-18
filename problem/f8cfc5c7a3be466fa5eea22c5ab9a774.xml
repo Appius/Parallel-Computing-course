@@ -1,0 +1,11 @@
+<problem display_name="Поддержка шаред стейт" markdown="&gt;&gt;Как поддерживать шаред стейт в модели акторов?&lt;&lt;&#10;&#10;[x] писать в базу в памяти&#10;[x] посылать сообщения отдельному актору &#10;[ ] модель акторов и так основана на шаред стейте  &#10;[ ] никак&#10;&#10;" max_attempts="2" showanswer="never">
+  <p>Как поддерживать шаред стейт в модели акторов?</p>
+  <choiceresponse>
+    <checkboxgroup label="Как поддерживать шаред стейт в модели акторов?" direction="vertical">
+      <choice correct="true">писать в базу в памяти</choice>
+      <choice correct="true">посылать сообщения отдельному актору </choice>
+      <choice correct="false">модель акторов и так основана на шаред стейте  </choice>
+      <choice correct="false">никак</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

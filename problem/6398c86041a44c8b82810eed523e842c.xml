@@ -1,0 +1,6 @@
+<problem display_name="Producer-Consumer" markdown="null" max_attempts="1" showanswer="never">
+  <p>В задаче producer-consumer, producer создает 1 сообщение в секунду, а consumer обрабатывает 1 сообщение за 2 секунды. Размер буфера 80 сообщений. Определить минимальное число consumer-ов чтобы не произошло переполнения буфера, если имеется 10 producer-ов работающих 10 сек.</p>
+  <stringresponse answer="4" type="ci">
+    <textline label="В задаче producer-consumer, producer создает 1 сообщение в секунду, а consumer обрабатывает 1 сообщение за 2 секунды. Размер буфера 80 сообщений. Определить минимальное число consumer-ов чтобы не произошло переполнения буфера, если имеется 10 producer-ов работающих 10 сек." size="10"/>
+  </stringresponse>
+</problem>

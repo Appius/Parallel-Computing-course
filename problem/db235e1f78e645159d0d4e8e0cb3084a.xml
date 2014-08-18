@@ -1,0 +1,10 @@
+<problem display_name="Types of exectution coordinations" markdown="&gt;&gt;Какие есть два основных класса координации выполнение потоков?&lt;&lt;&#10;[х] Взаимное исключение (критические блоки выполнения)&#10;[ ] Использование очереди выполнения задач&#10;[x] Координация выполнения потоков (обмен данными)" max_attempts="2" showanswer="never">
+  <p>Какие есть два основных класса координации выполнение потоков?</p>
+  <choiceresponse>
+    <checkboxgroup label="Какие есть два основных класса координации выполнение потоков?" direction="vertical">
+      <choice correct="false">Взаимное исключение (критические блоки выполнения)</choice>
+      <choice correct="false">Использование очереди выполнения задач</choice>
+      <choice correct="true">Координация выполнения потоков (обмен данными)</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

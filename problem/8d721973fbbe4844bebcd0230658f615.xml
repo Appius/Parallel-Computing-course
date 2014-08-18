@@ -1,0 +1,11 @@
+<problem display_name="Виды параллельных систем" markdown="&gt;&gt;Какого типа параллельных систем НЕ существует (относительно общей классификации)?&lt;&lt;&#10;     ( ) Мультипроцессорные&#10;     ( ) Гибридные&#10;     (x) Мультипоточные&#10;     ( ) Мультикомпьютерные" max_attempts="2" showanswer="never">
+  <p>Какого типа параллельных систем НЕ существует (относительно общей классификации)?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какого типа параллельных систем НЕ существует (относительно общей классификации)?" type="MultipleChoice">
+      <choice correct="false">Мультипроцессорные</choice>
+      <choice correct="false">Гибридные</choice>
+      <choice correct="true">Мультипоточные</choice>
+      <choice correct="false">Мультикомпьютерные</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

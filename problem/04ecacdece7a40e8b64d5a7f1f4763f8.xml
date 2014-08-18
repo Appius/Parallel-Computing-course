@@ -1,0 +1,15 @@
+<problem display_name="Состовляющие акторов" markdown="&gt;&gt;Какие есть составляющие акторов?&lt;&lt;&#10;&#10;[x] Mailbox&#10;[ ] Inbox&#10;[ ] Outbox&#10;[ ] SignalActor&#10;[x] ActorRef&#10;[ ] ActorOut&#10;[x] Dispatcher&#10;[x] ActorSystem" max_attempts="2" showanswer="never">
+  <p>Какие есть составляющие акторов?</p>
+  <choiceresponse>
+    <checkboxgroup label="Какие есть составляющие акторов?" direction="vertical">
+      <choice correct="true">Mailbox</choice>
+      <choice correct="false">Inbox</choice>
+      <choice correct="false">Outbox</choice>
+      <choice correct="false">SignalActor</choice>
+      <choice correct="true">ActorRef</choice>
+      <choice correct="false">ActorOut</choice>
+      <choice correct="true">Dispatcher</choice>
+      <choice correct="true">ActorSystem</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

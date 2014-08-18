@@ -1,0 +1,11 @@
+<problem display_name="Отличия между ask и tell" markdown="&gt;&gt;Какое отличие между двумя способами отправки сообщения: tell и ask?&lt;&lt;&#10;     ( ) tell работает асинхронно, ask синхронно&#10;     ( ) tell работает синхронно, ask асинхронно &#10;     (x) tell работает асинхронно, ничего не возвращает, ask - также асинхронно, но возвращает объект Future&#10;     ( ) tell было в более старых версиях akka, ask - в новых" max_attempts="2" showanswer="never">
+  <p>Какое отличие между двумя способами отправки сообщения: tell и ask?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Какое отличие между двумя способами отправки сообщения: tell и ask?" type="MultipleChoice">
+      <choice correct="false">tell работает асинхронно, ask синхронно</choice>
+      <choice correct="false">tell работает синхронно, ask асинхронно </choice>
+      <choice correct="true">tell работает асинхронно, ничего не возвращает, ask - также асинхронно, но возвращает объект Future</choice>
+      <choice correct="false">tell было в более старых версиях akka, ask - в новых</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>

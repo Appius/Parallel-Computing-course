@@ -1,0 +1,11 @@
+<problem display_name="Недостатки syncronized block" markdown="&gt;&gt;Отметьте недостатки синхронайзд блока:&lt;&lt;&#10;&#10;[x] нет разделения на рид/райт&#10;[ ] сложно использовать&#10;[x] плохая производительность&#10;[x] защищает код а не данные&#10;" max_attempts="2" showanswer="never">
+  <p>Отметьте недостатки синхронайзд блока:</p>
+  <choiceresponse>
+    <checkboxgroup label="Отметьте недостатки синхронайзд блока:" direction="vertical">
+      <choice correct="true">нет разделения на рид/райт</choice>
+      <choice correct="false">сложно использовать</choice>
+      <choice correct="true">плохая производительность</choice>
+      <choice correct="true">защищает код а не данные</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

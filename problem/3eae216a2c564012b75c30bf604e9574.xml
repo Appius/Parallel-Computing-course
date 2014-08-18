@@ -1,0 +1,15 @@
+<problem display_name="Основные состония в Java" markdown="&gt;&gt;Какие основные состояния могут быть у потоков в java?&lt;&lt;&#10;&#10;[x] Runnable&#10;[ ] Unstarted&#10;[x] New&#10;[ ] WaitSleepJoin&#10;[ ] Suspended&#10;[ ] AbortRequested&#10;[x] Blocked&#10;[ ] Aborted" max_attempts="2" showanswer="never">
+  <p>Какие основные состояния могут быть у потоков в java?</p>
+  <choiceresponse>
+    <checkboxgroup label="Какие основные состояния могут быть у потоков в java?" direction="vertical">
+      <choice correct="true">Runnable</choice>
+      <choice correct="false">Unstarted</choice>
+      <choice correct="true">New</choice>
+      <choice correct="false">WaitSleepJoin</choice>
+      <choice correct="false">Suspended</choice>
+      <choice correct="false">AbortRequested</choice>
+      <choice correct="true">Blocked</choice>
+      <choice correct="false">Aborted</choice>
+    </checkboxgroup>
+  </choiceresponse>
+</problem>

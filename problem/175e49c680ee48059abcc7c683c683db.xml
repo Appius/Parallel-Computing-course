@@ -1,0 +1,10 @@
+<problem display_name="Вызов из Java scala кода" markdown="&gt;&gt;Может ли java вызывать scala код?&lt;&lt;&#10;     ( ) Нет&#10;     (x) Да, но с ограничениями&#10;     ( ) Да, полностью" max_attempts="2" showanswer="never">
+  <p>Может ли java вызывать scala код?</p>
+  <multiplechoiceresponse>
+    <choicegroup label="Может ли java вызывать scala код?" type="MultipleChoice">
+      <choice correct="false">Нет</choice>
+      <choice correct="true">Да, но с ограничениями</choice>
+      <choice correct="false">Да, полностью</choice>
+    </choicegroup>
+  </multiplechoiceresponse>
+</problem>
